@@ -22,6 +22,8 @@
 // 600 and above             @2.00;
 import 'dart:io' show stdin;
 void main(){
+  num Charge_Amout= 0;
+  num Net_Amount= 0;
   print("Enter your id :");
   int id = int.parse(stdin.readLineSync()!);
   print("Enter your name ");
@@ -32,7 +34,10 @@ void main(){
     print("The id of customer $id");
     print("The name of customer $name");
     print("The unit of customer $unit");
+  
     double total_amount= 1.20*unit;
+    Charge_Amout =(total_amount*15)/100;
+    Net_Amount = Charge_Amout+total_amount;
     print("Amount Charges @Rs. 1.20 per unit : $total_amount");
   }
   else if(unit >= 200 && unit < 400){
@@ -40,6 +45,8 @@ void main(){
     print("The name of customer $name");
     print("The unit of customer $unit");
     double total_amount= 1.50*unit;
+    Charge_Amout =(total_amount*15)/100;
+    Net_Amount = Charge_Amout+total_amount;
     print("Amount Charges @Rs. 1.50 per unit : $total_amount");
     }
     else if(unit >=400 && unit < 600){
@@ -47,13 +54,18 @@ void main(){
     print("The name of customer $name");
     print("The unit of customer $unit");
     double total_amount= 1.80*unit;
+    Charge_Amout =(total_amount*15)/100;
+    Net_Amount = Charge_Amout+total_amount;
     print("Amount Charges @Rs. 1.80 per unit : $total_amount");
     }else{
       print("The id of customer $id");
     print("The name of customer $name");
     print("The unit of customer $unit");
     double total_amount= 2.00*unit;
+   Charge_Amout =(total_amount*15)/100;
+    Net_Amount = Charge_Amout+total_amount;
     print("Amount Charges @Rs. 2.00 per unit : $total_amount");
     }
+    print("Net Bill Amount : $Net_Amount");
 
 }
